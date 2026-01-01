@@ -1,68 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore all APUSH periods - Colonial America through Modern Era">
-    <title>APUSH Units Overview | APUSH Learning Hub</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore all APUSH periods - Colonial America through Modern Era" />
+  <title>APUSH Units Overview | APUSH Learning Hub</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="index.html" class="logo" aria-label="APUSH Learning Hub Home">
-                <span class="logo-text">APUSH Hub</span>
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="units.html" class="nav-link active" aria-current="page">Units</a></li>
-                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
-                <li><a href="schedule.html" class="nav-link">Live Study</a></li>
-                <li><a href="resources.html" class="nav-link">Resources</a></li>
-                <li><a href="api-config.html" class="nav-link">AI Settings</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                    <span class="theme-icon">🌙</span>
-                </button>
-                <button class="motion-toggle" aria-label="Toggle reduced motion" title="Reduce motion">
-                    <span class="motion-icon">⚙️</span>
-                </button>
-            </div>
+      <div class="nav-container">
+        <a href="index.html" class="logo" aria-label="APUSH Learning Hub Home">
+          <span class="logo-text">APUSH Hub</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-menu" id="primary-navigation">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="units.html" class="nav-link active" aria-current="page">Units</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="schedule.html" class="nav-link">Live Study</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="api-config.html" class="nav-link">AI Settings</a></li>
+        </ul>
+
+        <div class="nav-controls" aria-label="Display controls">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+          <button class="motion-toggle" type="button" aria-label="Toggle reduced motion" title="Reduce motion">
+            <span class="motion-icon" aria-hidden="true">⚙️</span>
+          </button>
         </div>
+      </div>
     </nav>
+  </header>
 
-    <main class="main-content">
-        <section class="units-header" aria-labelledby="units-heading">
-            <div class="container">
-                <h1 id="units-heading" class="page-title">APUSH Units Overview</h1>
-                <p class="page-subtitle">Explore all 8 periods of U.S. History from Colonial America to the Modern Era</p>
-            </div>
-        </section>
+  <main class="main-content" id="main" tabindex="-1">
+    <section class="units-header" aria-labelledby="units-heading">
+      <div class="container">
+        <h1 id="units-heading" class="page-title">APUSH Units Overview</h1>
+        <p class="page-subtitle">
+          Explore all 8 periods of U.S. History from Colonial America to the Modern Era
+        </p>
+      </div>
+    </section>
 
-        <section class="units-grid-section" aria-labelledby="periods-heading">
-            <div class="container">
-                <h2 id="periods-heading" class="sr-only">APUSH Periods</h2>
-                <div class="units-grid" id="units-grid" role="list">
-                    <!-- Period cards will be dynamically generated -->
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="units-grid-section" aria-labelledby="periods-heading">
+      <div class="container">
+        <h2 id="periods-heading" class="sr-only">APUSH Periods</h2>
 
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <p>&copy; 2024 APUSH Learning Hub. Designed for AP U.S. History exam preparation.</p>
+        <div class="units-grid" id="units-grid" role="list" aria-live="polite">
+          <!-- Period cards will be dynamically generated -->
         </div>
-    </footer>
 
-    <script src="apush-data.js"></script>
-    <script src="script.js"></script>
-    <script src="units.js"></script>
+        <noscript>
+          <p class="page-subtitle">
+            JavaScript is required to display the APUSH period cards. Please enable JavaScript and reload.
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2024 APUSH Learning Hub. Designed for AP U.S. History exam preparation.</p>
+    </div>
+  </footer>
+
+  <script src="apush-data.js"></script>
+  <script src="script.js"></script>
+  <script src="units.js"></script>
 </body>
 </html>
